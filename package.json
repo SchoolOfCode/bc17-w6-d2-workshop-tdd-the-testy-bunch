@@ -5,5 +5,8 @@
   "scripts": {},
   "type": "module",
   "author": "Rob Styles",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^2.0.5"
+  }
 }
