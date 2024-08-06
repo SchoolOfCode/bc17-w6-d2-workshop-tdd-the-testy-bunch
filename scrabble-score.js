@@ -38,13 +38,18 @@ export const pointsTable = {
 
 export function calculateScrabbleScore(word) {
 	// this splits up the word in to an array of letters
-	const letters = word.split("");
+	const letters = word.toUpperCase().split("");
 
 	// a variable to keep track and modify the score
 	let score = 0;
 
 	letters.forEach((letter) => {
 		const letterPoints = pointsTable[letter];
+
+		if (letterPoints === undefined) {
+			throw new Error(`Non standard character (${letter}) in given word`);
+		}
+
 		score += letterPoints
 	})
 

@@ -15,3 +15,13 @@ test("Test every letter to be reward its correct points", () => {
 		expect(calculateScrabbleScore(letter)).toBe(pointsTable[letter])
 	})
 })
+
+test("Test the word `dog`, it should be worth 5 points", () => {
+	expect(calculateScrabbleScore("dog")).toBe(5);
+})
+
+test("Test the word `café`, it should fail, it is not a standard a-z letter", () => {
+	expect(() => {
+		expect(calculateScrabbleScore("café"))
+	}).toThrowError("Non standard character (É) in given word")
+})
