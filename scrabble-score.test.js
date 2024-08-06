@@ -25,3 +25,11 @@ test("Test the word `café`, it should fail, it is not a standard a-z letter", (
 		expect(calculateScrabbleScore("café"))
 	}).toThrowError("Non standard character (É) in given word")
 })
+
+// plan 
+// measure the length of the word string
+// if string >= 7 ,  then + 50 points to the word point total
+
+test("Test the word `puppies`, it should be worth 13 + 50 bonus points", () => {
+	expect(calculateScrabbleScore("puppies")).toBe(63);
+})

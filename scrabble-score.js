@@ -42,6 +42,7 @@ export function calculateScrabbleScore(word) {
 
 	// a variable to keep track and modify the score
 	let score = 0;
+	let wordLength = word.length;
 
 	letters.forEach((letter) => {
 		const letterPoints = pointsTable[letter];
@@ -54,6 +55,11 @@ export function calculateScrabbleScore(word) {
 	})
 
 	// return the score after the loop is done.
+
+	if (wordLength >= 7) {
+		score = score + 50; 
+	}
+	 
 
 	return score;
 }
