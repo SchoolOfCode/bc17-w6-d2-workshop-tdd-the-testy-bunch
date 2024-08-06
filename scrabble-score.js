@@ -37,7 +37,7 @@ export const pointsTable = {
 // 4. Create a score variable and add the points for each letter to this score variable.
 
 export function calculateScrabbleScore(word) {
-	// this splits up the word in to an array of letters
+	// this splits up the word in to an array of letters, and forced the letters to be uppercase and then split into their values.
 	const letters = word.toUpperCase().split("");
 
 	// a variable to keep track and modify the score
